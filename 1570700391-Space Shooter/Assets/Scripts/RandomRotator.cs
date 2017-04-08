@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class RandomRotator : MonoBehaviour {
 
+    public float tumble;
 
-	public float tumble;
-
-	void Start (){
-
-		Rigidbody rb;
-		rb = GetComponent<Rigidbody> ();
-		rb.angularVelocity = Random.insideUnitSphere * tumble;
-	}
-
-
-
+    void Start()
+    {
+        GetComponent<Rigidbody>().angularVelocity = Random.insideUnitSphere * tumble;
+    }
 }

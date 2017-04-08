@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class DestroyByTime : MonoBehaviour {
 
-	void onTriggerExit(Collider other)
-	{
-		Object.DestroyObject (other.gameObject);
-	}﻿
+    public float lifetime;
+
+    void Start()
+    {
+        Destroy(gameObject, lifetime);
+    }
 }
